@@ -1,9 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
-import 'package:my_flutter/app/app.bottomsheets.dart';
-import 'package:my_flutter/app/app.locator.dart';
-import 'package:my_flutter/ui/common/app_strings.dart';
-import 'package:my_flutter/ui/views/home/home_viewmodel.dart';
+import 'package:twitter_clone/app/app.bottomsheets.dart';
+import 'package:twitter_clone/app/app.locator.dart';
+import 'package:twitter_clone/ui/common/app_strings.dart';
+import 'package:twitter_clone/ui/views/home/home_viewmodel.dart';
 
 import '../helpers/test_helpers.dart';
 

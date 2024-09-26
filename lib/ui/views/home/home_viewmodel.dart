@@ -1,7 +1,7 @@
-import 'package:my_flutter/app/app.bottomsheets.dart';
-import 'package:my_flutter/app/app.dialogs.dart';
-import 'package:my_flutter/app/app.locator.dart';
-import 'package:my_flutter/ui/common/app_strings.dart';
+import 'package:twitter_clone/app/app.bottomsheets.dart';
+import 'package:twitter_clone/app/app.dialogs.dart';
+import 'package:twitter_clone/app/app.locator.dart';
+import 'package:twitter_clone/ui/common/app_strings.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 

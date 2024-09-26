@@ -1,3 +1,3 @@
-# my_flutter
+# twitter_clone
 
 A new Flutter project.

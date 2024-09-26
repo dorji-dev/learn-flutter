@@ -1,5 +1,5 @@
-name: my_flutter
-description: A new Flutter project.
+name: twitter_clone
+description: A twitter app clone for learning purposes.
 publish_to: 'none'
 version: 0.1.0
 
@@ -21,7 +21,11 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   mockito: ^5.4.1
   stacked_generator: ^1.3.3
+  flutter_native_splash: ^2.4.1
 
 flutter:
   uses-material-design: true
+  # To add assets to your application, add an assets section, like this:
+  assets:
+   - assets/images/twitter-logo.png
 

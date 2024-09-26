@@ -1,7 +1,7 @@
-import 'package:my_flutter/ui/bottom_sheets/notice/notice_sheet.dart';
-import 'package:my_flutter/ui/dialogs/info_alert/info_alert_dialog.dart';
-import 'package:my_flutter/ui/views/home/home_view.dart';
-import 'package:my_flutter/ui/views/startup/startup_view.dart';
+import 'package:twitter_clone/ui/bottom_sheets/notice/notice_sheet.dart';
+import 'package:twitter_clone/ui/dialogs/info_alert/info_alert_dialog.dart';
+import 'package:twitter_clone/ui/views/home/home_view.dart';
+import 'package:twitter_clone/ui/views/startup/startup_view.dart';
 import 'package:stacked/stacked_annotations.dart';
 import 'package:stacked_services/stacked_services.dart';
 // @stacked-import

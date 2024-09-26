@@ -1,4 +1,4 @@
-package com.example.my_flutter
+package com.twitter.app
 
 import io.flutter.embedding.android.FlutterActivity
 

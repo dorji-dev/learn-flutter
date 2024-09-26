@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:my_flutter/app/app.locator.dart';
+import 'package:twitter_clone/app/app.locator.dart';
 
 import '../helpers/test_helpers.dart';
 

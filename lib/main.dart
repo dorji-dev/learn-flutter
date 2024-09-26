@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:my_flutter/app/app.bottomsheets.dart';
-import 'package:my_flutter/app/app.dialogs.dart';
-import 'package:my_flutter/app/app.locator.dart';
-import 'package:my_flutter/app/app.router.dart';
+import 'package:twitter_clone/app/app.bottomsheets.dart';
+import 'package:twitter_clone/app/app.dialogs.dart';
+import 'package:twitter_clone/app/app.locator.dart';
+import 'package:twitter_clone/app/app.router.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 Future<void> main() async {
