@@ -22,7 +22,7 @@ class HomeViewModel extends BaseViewModel {
     _dialogService.showCustomDialog(
       variant: DialogType.infoAlert,
       title: 'Stacked Rocks!',
-      description: 'Give stacked $_counter stars on Github',
+      description: 'Give stacked and some supplement $_counter stars on Github',
     );
   }
 

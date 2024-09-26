@@ -10,11 +10,11 @@ Future<void> main() async {
   await setupLocator();
   setupDialogUi();
   setupBottomSheetUi();
-  runApp(const MainApp());
+  runApp(const FacebookClone());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class FacebookClone extends StatelessWidget {
+  const FacebookClone({super.key});
 
   @override
   Widget build(BuildContext context) {
