@@ -4,9 +4,8 @@ import 'package:twitter_clone/ui/widgets/button.dart'; // Update with your actua
 class LoginForm extends StatefulWidget {
   final Function onLogin; // Callback for login action
   final bool isLoading; // Indicates if the form is in loading state
-  final _loginFormKey = GlobalKey<FormState>();
 
-  LoginForm({
+  const LoginForm({
     super.key,
     required this.onLogin,
     required this.isLoading,
@@ -17,20 +16,31 @@ class LoginForm extends StatefulWidget {
 }
 
 class LoginFormState extends State<LoginForm> {
+  final RegExp emailRegex = RegExp(
+    r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+  );
+  final _loginFormKey = GlobalKey<FormState>();
+  final _emailFieldKey = GlobalKey<FormFieldState<String>>();
+  final _passwordFieldKey = GlobalKey<FormFieldState<String>>();
+
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: widget._loginFormKey,
+      key: _loginFormKey,
       child: Column(
         children: [
           // Email Field
           TextFormField(
+            key: _emailFieldKey,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Required';
+              } else if (!emailRegex.hasMatch(value)) {
+                return 'Invalid email format';
               }
               return null;
             },
+            onChanged: (value) => _emailFieldKey.currentState!.validate(),
             decoration: const InputDecoration(
               labelText: 'Email',
               border: OutlineInputBorder(),
@@ -41,12 +51,16 @@ class LoginFormState extends State<LoginForm> {
 
           // Password Field
           TextFormField(
+            key: _passwordFieldKey,
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return 'Required';
+              } else if (value.length < 6) {
+                return 'Min 6 characters';
               }
               return null;
             },
+            onChanged: (value) => _passwordFieldKey.currentState!.validate(),
             obscureText: true,
             decoration: const InputDecoration(
               labelText: 'Password',
@@ -71,7 +85,7 @@ class LoginFormState extends State<LoginForm> {
           XButton(
             label: 'Login',
             onPressed: () async {
-              if (widget._loginFormKey.currentState!.validate()) {
+              if (_loginFormKey.currentState!.validate()) {
                 await widget
                     .onLogin(); // Call the login function passed from the parent
               }
