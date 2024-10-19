@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:twitter_clone/ui/forms/login_form.dart';
+// ignore: unused_import
 import 'package:twitter_clone/ui/widgets/button.dart';
 
 import 'login_viewmodel.dart';
@@ -28,43 +30,10 @@ class LoginView extends StackedView<LoginViewModel> {
                   height: 100,
                 ),
                 const SizedBox(height: 40),
-
                 // Email Field
-                const TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Email',
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email),
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                // Password Field
-                const TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    labelText: 'Password',
-                    border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.lock),
-                  ),
-                ),
-
-                // Forgot Password Button
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      // Add forgot password functionality here
-                    },
-                    child: const Text("Forgot Password?"),
-                  ),
-                ),
-                const SizedBox(height: 20),
-                XButton(
-                  label: 'Login',
-                  onPressed: () {},
-                ),
+                LoginForm(
+                    onLogin: viewModel.login,
+                    isLoading: viewModel.formSubmitting),
                 const SizedBox(height: 30),
                 // Divider with "or" text
                 const Row(
@@ -82,7 +51,9 @@ class LoginView extends StackedView<LoginViewModel> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                const Text("Don't have an account?", ),
+                const Text(
+                  "Don't have an account?",
+                ),
                 // Sign-up Button
                 TextButton(
                   onPressed: viewModel.navigateToRegisterPage,

@@ -1,13 +1,16 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:twitter_clone/app/app.bottomsheets.dart';
 import 'package:twitter_clone/app/app.dialogs.dart';
 import 'package:twitter_clone/app/app.locator.dart';
 import 'package:twitter_clone/app/app.router.dart';
 import 'package:stacked_services/stacked_services.dart';
+import 'package:twitter_clone/app/keys/global_keys.dart';
 import 'package:twitter_clone/app/themes/app_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   await setupLocator();
   setupDialogUi();
   setupBottomSheetUi();
@@ -27,6 +30,7 @@ class Shopping extends StatelessWidget {
         StackedService.routeObserver,
       ],
       theme: AppTheme.theme,
+      scaffoldMessengerKey: scaffoldMessengerKey,
     );
   }
 }

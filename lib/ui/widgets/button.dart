@@ -28,7 +28,7 @@ class XButton extends StatelessWidget {
       case ButtonVariant.outline:
         return OutlinedButton(
           style: buttonStyle,
-          onPressed: onPressed,
+          onPressed: isLoading ? null : onPressed,
           child: isLoading
               ? SizedBox(
                   width: 24,
@@ -44,7 +44,7 @@ class XButton extends StatelessWidget {
       case ButtonVariant.secondary:
         return ElevatedButton(
           style: buttonStyle,
-          onPressed: onPressed,
+          onPressed: isLoading ? null : onPressed,
           child: isLoading
               ? SizedBox(
                   width: 24,
@@ -61,7 +61,7 @@ class XButton extends StatelessWidget {
       default:
         return ElevatedButton(
           style: buttonStyle,
-          onPressed: onPressed,
+          onPressed: isLoading ? null : onPressed,
           child: isLoading
               ? SizedBox(
                   width: 24,
