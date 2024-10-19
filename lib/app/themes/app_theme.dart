@@ -31,8 +31,7 @@ class AppTheme {
             fontWeight: FontWeight.bold,
             color: kTwitterBlack),
         bodyLarge: TextStyle(fontSize: bodyFontSize, color: kTwitterBlack),
-        bodyMedium:
-            TextStyle(fontSize: smallFontSize, color: kTwitterBlack),
+        bodyMedium: TextStyle(fontSize: smallFontSize, color: kTwitterBlack),
         labelLarge: TextStyle(
             fontSize: bodyFontSize,
             fontWeight: FontWeight.bold,

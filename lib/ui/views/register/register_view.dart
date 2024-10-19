@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 import 'package:twitter_clone/ui/widgets/button.dart';
 
-import 'login_viewmodel.dart';
+import 'register_viewmodel.dart';
 
-class LoginView extends StackedView<LoginViewModel> {
-  const LoginView({super.key});
+class RegisterView extends StackedView<RegisterViewModel> {
+  const RegisterView({super.key});
 
   @override
   Widget builder(
     BuildContext context,
-    LoginViewModel viewModel,
+    RegisterViewModel viewModel,
     Widget? child,
   ) {
     return Scaffold(
@@ -49,20 +49,9 @@ class LoginView extends StackedView<LoginViewModel> {
                     prefixIcon: Icon(Icons.lock),
                   ),
                 ),
-
-                // Forgot Password Button
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: TextButton(
-                    onPressed: () {
-                      // Add forgot password functionality here
-                    },
-                    child: const Text("Forgot Password?"),
-                  ),
-                ),
                 const SizedBox(height: 20),
                 XButton(
-                  label: 'Login',
+                  label: 'Register',
                   onPressed: () {},
                 ),
                 const SizedBox(height: 30),
@@ -82,11 +71,11 @@ class LoginView extends StackedView<LoginViewModel> {
                   ],
                 ),
                 const SizedBox(height: 20),
-                const Text("Don't have an account?", ),
+                const Text('Already have an account?'),
                 // Sign-up Button
                 TextButton(
-                  onPressed: viewModel.navigateToRegisterPage,
-                  child: const Text('Sign Up'),
+                  onPressed: viewModel.navigateToLoginPage,
+                  child: const Text('Log in'),
                 ),
 
                 const SizedBox(height: 10),
@@ -101,8 +90,8 @@ class LoginView extends StackedView<LoginViewModel> {
   }
 
   @override
-  LoginViewModel viewModelBuilder(
+  RegisterViewModel viewModelBuilder(
     BuildContext context,
   ) =>
-      LoginViewModel();
+      RegisterViewModel();
 }
