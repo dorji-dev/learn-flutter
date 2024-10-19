@@ -15,8 +15,6 @@ class LoginViewModel extends BaseViewModel {
   final _navigationService = locator<NavigationService>();
   final _authService = locator<AuthenticationService>();
 
-  Duration get loginTime => const Duration(milliseconds: 2250);
-
   void navigateToRegisterPage() {
     _navigationService.navigateToRegisterView();
   }
